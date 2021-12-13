@@ -1,0 +1,21 @@
+
+# 项目的访问接口
+server:
+  port: 8080
+
+# 项目名称以及默认配置环境
+spring:
+  application:
+    name: e-blog
+  profiles:
+    active: dev
+
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml # 对应的 XML 文件位置
+  global-config:
+    db-config:
+      id-type: auto # 数据库ID自增
+  configuration: # mybatis-plus 自动映射策略
+    auto-mapping-behavior: partial # 只对非嵌套的 resultMap 进行自动映射
+    map-underscore-to-camel-case: true  # 自动驼峰命名规则
