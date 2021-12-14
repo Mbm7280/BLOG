@@ -19,3 +19,23 @@ mybatis-plus:
   configuration: # mybatis-plus 自动映射策略
     auto-mapping-behavior: partial # 只对非嵌套的 resultMap 进行自动映射
     map-underscore-to-camel-case: true  # 自动驼峰命名规则
+
+secure:
+  ignored:
+    urls: #安全路径白名单
+      - /doc.html
+      - /swagger-ui.html
+      - /swagger-resources/**
+      - /swagger/**
+      - /**/v2/api-docs
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.ico
+      - /webjars/springfox-swagger-ui/**
+      - /actuator/**
+      - /druid/**
+      - /ums/umsAdmin/login
+      - /ums/umsAdmin/register
+      - /ums/umsAdmin/info
+      - /ums/umsAdmin/logout
